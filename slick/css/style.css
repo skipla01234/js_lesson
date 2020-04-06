@@ -1,0 +1,120 @@
+body {
+  background: #3698D9;
+  padding: 100px 0;
+}
+
+/* 見出し */
+.headline {
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+/* slickを囲う領域は画面の40&にして、中央寄せ */
+.wrap {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+/* 一番通常のboxデザイン */
+.box {
+  background: #fff;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+  color: #3698D9;
+  font-weight: bold;
+}
+
+.box_01 {
+  width: 100%;
+  height: 100px;
+}
+
+.box_02 {
+  width: 100px;
+  height: 100px;
+}
+
+.box_03 {
+  width: 100px;
+  height: 200px;
+}
+
+.box_04 {
+  width: 100px;
+  height: 400px;
+}
+
+.image-box {
+  width: 400px;
+  height: 400px;
+}
+
+.image-box img {
+  margin: 0 auto;
+}
+
+/* 左右に20pxずつmarginを取る */
+.margin-rl-20 {
+  margin: 0 20px;
+}
+
+.card {
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.rank {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  font-size: 12px;
+}
+
+.rank-gold {
+  background: #DBB426;
+}
+
+.rank-silver {
+  background: #9FA0A0;
+}
+
+.rank-bronze {
+  background: #C47029;
+}
+
+.rank-gray {
+  background: gray;
+}
+
+.card_02 {
+  width: 100px;
+  background: #fff;
+  margin: 0 10px;
+  text-align: center;
+  box-shadow: inset -2px 0px 20px 0px black;
+}
+
+.card_02 .img-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.card_02 img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card_02 p:nth-child(2) {
+  color: #9AA6B5;
+}
