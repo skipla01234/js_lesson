@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>関数の練習</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    const name = 'スキプラ'
+    const age = 19
+    
+    // 問題①の答え
+    // いらっしゃい○○(自分の名前)を返事する関数(おじさん)
+    function sayHelloByName(name) {
+      alert('いらっしゃい' + name + 'さん');
+    }
+
+    // 問題②の答え
+    // こんにちは○○(自分の名前)さん、あなたの年齢はxx歳ですと返事する関数(おじさん)
+    function sayHelloByNameAndAge(name, age) {
+      alert('こんにちは' + name + 'さん、あなたの年齢は' + age + '歳です');
+    }
+
+    // 問題③の答え
+    // カートに入ってる合計金額が5000円以上なら「あなたのカートには、xxx円(合計金額)分の商品が入ってるので、送料が無料になります」と表示する関数(おじさん)
+    // カートに入ってる合計金額が5000円未満なら「あなたのカートには、xxx(合計金額)分の商品が入っているので送料は有料です。5000円以上なら送料無料です」と表示する関数(おじさん)
+    function alertPostage(cart_in_price) {
+      if (cart_in_price >= 5000) {
+        alert('あなたのカートには、' + cart_in_price + '円分の商品が入っているので、送料が無料となります');
+      } else {
+        alert('あなたのカートには、' + cart_in_price + '円分の商品が入っているので、送料は有料です。5000円以上なら送料無料です');
+      }
+    }
+
+
+    // 問題①の答えを呼び出す
+    // 引数(おじさんが仕事を全うするのに必要な情報)はnameだけ渡す
+    sayHelloByName(name);
+    
+    // 問題②の答えを呼び出す
+    // 引数(おじさんが仕事を全うするのに必要な情報)はnameとageを渡す
+    sayHelloByNameAndAge(name, age);
+
+    // 問題③の答えを呼び出す
+    // カートの金額が5000円以上のパターン
+    let cart_in_price = 5001 // 後で書き換えたいので、letを使って再代入を可能にしておく
+    alertPostage(cart_in_price)
+
+    // カートの金額が5000円未満のパターン
+    cart_in_price = 4999
+    alertPostage(cart_in_price)
+  </script>
+  
+</body>
+</html>
