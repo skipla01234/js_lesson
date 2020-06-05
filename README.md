@@ -6,6 +6,11 @@
 
 ## DEMO
 
+* [JavaScriptの変数についての解説ページ](https://note.com/skipla/n/n702cd7a27e09)
+  * [動作確認デモページ](https://skipla01234.github.io/js_lesson/basic/variables/index.html)
+* [JavaScriptの関数についての解説ページ](https://note.com/skipla/n/n5560e8215733)
+  * [動作確認デモページ](https://skipla01234.github.io/js_lesson/basic/methods/)
+
 #### slickのデモページ
 
 カルーセルのデモが見れます。
