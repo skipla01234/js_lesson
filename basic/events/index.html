@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>イベントの基礎</title>
+  <style>
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    #left {
+      width: 50%;
+    }
+
+    #right {
+      width: 50%;
+      height: 500px;
+      border: 1px solid gray;
+      overflow: scroll;
+    }
+
+    #left p {
+      width: 300px;
+      margin : 20px auto;
+      padding: 30px;
+      background: #DF3053;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="left">
+      <p id="click"     title="マウスをクリックしましたね!">clickイベント</p>
+      <p id="mousemove" title="カーソルを動かしましたね！">mousemoveイベント</p>
+      <p id="mouseover" title="カーソルを要素に乗せましたね！">mouseoverイベント</p>
+      <p id="mousedown" title="マウスを押しましたね">mousdownイベント</p>
+      <p id="mouseup"   title="マウスから指を離しましたね">mousdupイベント</p>
+      <p id="mouseout"  title="カーソルが要素から出ましたね">mousdoutイベント</p>
+    </div>
+    <div id="right">
+      <p id="target"></p>
+    </div>
+  </div>
+
+  <script>
+    const p_click = document.getElementById("click")
+    const p_mousemove = document.getElementById("mousemove")
+    const p_mouseover = document.getElementById("mouseover")
+    const p_mousedown = document.getElementById("mousedown")
+    const p_mouseup = document.getElementById("mouseup")
+    const p_mouseout = document.getElementById("mouseout")
+
+    p_click.addEventListener('click', onClick, false)
+    p_mousemove.addEventListener('mousemove', onClick, false)
+    p_mouseover.addEventListener('mouseover', onClick, false)
+    p_mousedown.addEventListener('mousedown', onClick, false)
+    p_mouseup.addEventListener('mouseup', onClick, false)
+    p_mouseout.addEventListener('mouseout', onClick, false)
+
+    function onClick(event) {
+      // target.innerText = event.target.title
+      const right = document.getElementById("right")
+      const p = document.createElement("p")
+      const text = document.createTextNode(event.target.title)
+      p.appendChild(text)
+      right.appendChild(p)
+
+      right.scrollTop = right.scrollHeight
+
+    }
+
+  </script>
+
+</body>
+
+</html>
