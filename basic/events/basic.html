@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>イベントハンドラーの登録</title>
+  <style>
+    button {
+      display: block;
+      width: 500px;
+      background: #DF3053;
+      color : #fff;
+      padding: 20px 0;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="btn1" onClick="sayHello()">ここを押すとアラートが出ます(HTML属性利用)</button>
+  <button id="btn2">ここを押すとアラートが出ます(イベントプロパティ利用)</button>
+  <button id="btn3">ここを押すとアラートが出ます(イベントリスナー利用)</button>
+  
+</body>
+
+<script type="text/javascript">
+
+  // id=btn2のElementオブジェクトを取得
+  const btn2 = document.getElementById('btn2')
+  // btn2のElementオブジェクトのonclickというイベントプロパティにsayHello関数を登録
+  btn2.onclick = sayHello
+
+  // id=btn3のElementオブジェクトを取得
+  const btn3 = document.getElementById('btn3')
+  // btn3がクリックされたらsayhello関数を呼び出す
+  btn3.addEventListener('click', sayHello)
+
+  function sayHello() {
+    alert('こんにちは')
+  }
+
+</script>
+</html>
