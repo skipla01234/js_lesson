@@ -36,15 +36,16 @@
 
     p.addEventListener('click', scrollToTop)
 
-		function getScrolled() {
-		  return ( window.pageYOffset !== undefined ) ? window.pageYOffset: document.documentElement.scrollTop;
-		}
-
+    // TOPまでスクロールさせる
     function scrollToTop() {
-      const scrolled = getScrolled()
-      window.scrollTo(0, Math.floor(scrolled / 2))
+      // ページの中を特定の場所までスクロールさせる
+      // scrollTo(x軸の位置, Y軸の位置)
+      // x軸の位置 = 0でOK
+      // Y軸の位置 = 現在のスクロール量の半分まで移動
+      window.scrollTo(0, Math.floor(pageYOffset / 2))
 
-      if (scrolled > 0 ) {
+      // ページがTOPに戻るまで、30ミリ秒おきにスクロールさせる
+      if (pageYOffset > 0 ) {
         window.setTimeout(scrollToTop, 30)
       }
 			
