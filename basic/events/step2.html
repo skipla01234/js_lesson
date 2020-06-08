@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>文字を非表示にするサンプル</title>
+  <style>
+    button {
+      width: 200px;
+      background: #DF3053;
+      color : #fff;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="hidden">文字を非表示にする</button>
+  <p id="target">テキストテキスト</p>
+  
+</body>
+
+<script type="text/javascript">
+
+  // 非表示にするpタグのElementオブジェクトを取得
+  const target = document.getElementById("target")
+
+  // id=hiddenのElementオブジェクトを取得
+  const hidden = document.getElementById('hidden')
+  // hiddenがクリックされたら文字を非表示にする
+  hidden.addEventListener('click', hiddenTarget)
+
+  // 文字を非表示にする
+  function hiddenTarget() {
+    target.style.display = "none"
+  }
+</script>
+</html>
