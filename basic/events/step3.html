@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>TOPへ戻るの実装</title>
+  <style>
+    #back_to_top {
+      position: fixed;
+      bottom: 0px;
+      right: 30px;
+
+      width: 300px;
+      height: 50px;
+      text-align: center;
+      border-radius: 14px;
+      line-height: 50px;
+      background: #DF3053;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>ページタイトル</h1>
+    <p style="padding-bottom: 500px;">テキストテキスト1</p>
+    <p style="padding-bottom: 500px;">テキストテキスト2</p>
+    <p style="padding-bottom: 500px;">テキストテキスト3</p>
+    <p style="padding-bottom: 500px;">テキストテキスト4</p>
+    <p id="back_to_top">TOPへ戻る</p>
+  </div>
+  
+  <script type="text/javascript">
+    // const div = document.getElemntsByTagName('div')
+    const p = document.getElementById('back_to_top')
+
+    p.addEventListener('click', scrollToTop)
+
+		function getScrolled() {
+		  return ( window.pageYOffset !== undefined ) ? window.pageYOffset: document.documentElement.scrollTop;
+		}
+
+    function scrollToTop() {
+      const scrolled = getScrolled()
+      window.scrollTo(0, Math.floor(scrolled / 2))
+
+      if (scrolled > 0 ) {
+        window.setTimeout(scrollToTop, 30)
+      }
+			
+    }
+  </script>
+</body>
+</html>
