@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アロー関数の例</title>
+</head>
+<body>
+
+  <script type="text/javascript">
+
+    // これらの1や、"say hello"がリテラル(コード上に直書きされた数字・文字)
+    // リテラルは変数へ代入することが可能
+    const x = 1
+    const y = 1
+    const message = "say Hello"
+
+
+    // 関数もリテラルの1つで、関数リテラル(無名関数・匿名関数)と呼ばれる
+    const calcSum = function(x, y) {
+      return x + y
+    }
+
+    // アロー関数は、関数リテラルをシンプルに書く記法
+    const calcSumByArrow = (x,y) => {
+      return x + y
+    }
+  
+    // 関数の戻り値が1行で終わる場合は、returnも省略できる
+    const calcSumByArrowOneRow = (x,y) => x + y
+    
+    // 関数の引数が1つの場合は()も不要
+    const calcSumByArrowOneArg = x => x + x
+    
+    // 関数の引数がない場合は、()だけでOK
+    const sayHello = () => console.log(message)
+
+    console.log(calcSum(x,y))
+    console.log(calcSumByArrow(x,y))
+    console.log(calcSumByArrowOneRow(x,y))
+    console.log(calcSumByArrowOneArg(x))
+    sayHello()
+
+  </script>
+  
+
+</body>
+</html>
