@@ -19,6 +19,9 @@
       color: #fff;
       font-weight: bold;
     }
+    .hide {
+      display:none;
+    }
   </style>
 </head>
 <body>
@@ -28,7 +31,7 @@
     <p style="padding-bottom: 500px;">テキストテキスト2</p>
     <p style="padding-bottom: 500px;">テキストテキスト3</p>
     <p style="padding-bottom: 500px;">テキストテキスト4</p>
-    <p id="back_to_top">TOPへ戻る</p>
+    <p id="back_to_top" class="hide">TOPへ戻る</p>
   </div>
   
   <script type="text/javascript">
@@ -36,6 +39,7 @@
       $(window).on('scroll', function() {
         if ($(this).scrollTop() >= 300) {
           $('#back_to_top').fadeIn()
+          $('#back_to_top').removeClass('hide')
         } else {
           $('#back_to_top').fadeOut()
         }
